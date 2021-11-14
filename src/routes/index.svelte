@@ -9,27 +9,27 @@
 		{
 			name: "Train",
 			image: "../../img/train.png",
-			sound: "../../audio/train.wav"
+			sound: "audio/train.wav"
 		},
 		{
 			name: "Golfer",
 			image: "../../img/golf.png",
-			sound: "../../audio/golf.wav"
+			sound: "audio/golf.wav"
 		},
 		{
 			name: "Bell",
 			image: "../../img/bell.png",
-			sound: "../../audio/bell.wav"
+			sound: "audio/bell.wav"
 		},
 		{
 			name: "Gun",
 			image: "../../img/gun.png",
-			sound: "../../audio/gun.wav"
+			sound: "audio/gun.wav"
 		},
 		{
 			name: "Toilet",
 			image: "../../img/toilet.png",
-			audio: "../../audio/toilet.wav"
+			audio: "audio/toilet.wav"
 		}
 	]
 

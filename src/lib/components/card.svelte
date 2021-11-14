@@ -2,17 +2,14 @@
 
     export let button
 
-    function playMyAudio(){
-       document.getElementById("myAudio").play();
+    function playMyAudio(audioFile){
+       let myAudio = new Audio(audioFile);
+       myAudio.play();
      }
 
 </script>
 
-<audio src="static/audio/toilet.wav" id="myAudio"></audio>
-
-<button onclick="playMyAudio"></button>
-
-<button onClick="playMyAudio()">
+<button on:click={playMyAudio(button.sound)}>
     <div class="cards flex flex-col justify-center gap-x-2 max-w-2xl text-center">
 
     <img class="mx-auto p-7" alt="{button.image}" src="{button.image}">
@@ -21,7 +18,6 @@
 
     </div>
 </button>
-
 
 <style>
     img {
