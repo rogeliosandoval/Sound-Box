@@ -29,7 +29,7 @@
 		{
 			name: "Toilet",
 			image: "../../img/toilet.png",
-			audio: "audio/toilet.wav"
+			sound: "audio/toilet.wav"
 		}
 	]
 
