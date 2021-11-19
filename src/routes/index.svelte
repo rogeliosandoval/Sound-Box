@@ -1,8 +1,4 @@
-<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
-<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
-
 <script>
-
 	import Card from "$lib/components/card.svelte"
 
 	const buttons = [
@@ -32,10 +28,9 @@
 			sound: "audio/toilet.wav"
 		}
 	]
-
 </script>
 
-<section class="relataive font-sans pt-5 bg-blue-200">
+<section class="relataive font-sans pt-5 bg-blue-200 text-center">
 
 	<div class="text-center">
 		<p class="text-6xl">Sound-Box</p>
