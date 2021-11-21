@@ -1,45 +1,58 @@
 <script>
-	import Card from "$lib/components/card.svelte"
+	import { onMount } from "svelte";
 
-	const buttons = [
-		{
-			name: "Train",
-			image: "../../img/train.png",
-			sound: "audio/train.wav"
-		},
-		{
-			name: "Golfer",
-			image: "../../img/golf.png",
-			sound: "audio/golf.wav"
-		},
-		{
-			name: "Bell",
-			image: "../../img/bell.png",
-			sound: "audio/bell.wav"
-		},
-		{
-			name: "Gun",
-			image: "../../img/gun.png",
-			sound: "audio/gun.wav"
-		},
-		{
-			name: "Toilet",
-			image: "../../img/toilet.png",
-			sound: "audio/toilet.wav"
+	let media = [];
+	let mediaRecorder = null;
+
+	onMount(async () => {
+		const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+
+		mediaRecorder = new MediaRecorder(stream);
+		mediaRecorder.ondataavailable = (e) => media.push(e.data);
+		mediaRecorder.onstop = function() {
+			const audio = document.querySelector('audio');
+			const blob = new Blob( media, { 'type' : 'audio/ogg; codecs=opus' });
+			media = [];
+			audio.src = window.URL.createObjectURL(blob);
 		}
-	]
+	})
+
+	function startRecording(){
+		mediaRecorder.start();
+	}
+
+	function stopRecording(){
+		mediaRecorder.stop();
+	}
+
 </script>
 
-<section class="relataive font-sans pt-5 bg-blue-200 text-center">
+<section class="relative pb-12 pt-12 font-sans">
 
-	<div class="text-center">
-		<p class="text-6xl">Sound-Box</p>
+	<div class="container mx-auto text-center">
+		<audio class="w-1/2 mx-auto"controls></audio>
+		<br>
+		<button class="bg-red-400 hover:bg-red-500" id="record" on:click={startRecording}>Record</button>
+		<button class="bg-gray-300 hover:bg-gray-400" id="stop" on:click={stopRecording}>Stop</button>
 	</div>
 
-	<section class="mt-10 flex flex-wrap mx-auto w-3/4 gap-5 justify-center">
-		{#each buttons as button}
-			<Card button={button} />
-		{/each}
-	</section>
-	
 </section>
+
+
+<style>
+
+	audio::-webkit-media-controls-panel{
+		background: lightyellow;
+	}
+	
+	#record, #stop {
+		border: 2px solid #000000;
+		padding: 2px;
+		width: 85px;
+	}
+
+	button:active {
+  		transform: translateY(3px);
+	}
+
+</style>
