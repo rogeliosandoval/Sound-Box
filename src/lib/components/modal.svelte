@@ -15,14 +15,22 @@
 <div id="background" style="--display: {isOpenModal ? 'block' : 'none'};"></div>
 <div id="modal" style="--display: {isOpenModal ? 'block' : 'none'};">
     
-    <div class="text-center">
+    <div class="flex text-center h-full items-center">
 
-        <div class="py-7">
-            <img alt="record" src="img/record.gif" class="mx-auto" style="width: 100px; height: 100px;">
-            <div class="text-2xl text-red-300" style="text-shadow:black 0px 0px 10px;">RECORDING...</div>
+        <div class="container grid grid-cols-2 w-1/3 mx-auto gap-y-5 pb-5">
+
+            <div class="">
+                <img alt="record" src="img/record.gif" class="mx-auto" style="width: 95px; height: 90px;">
+            </div>
+            
+            <div class="text-2xl text-red-300 mt-10" style="text-shadow:black 0px 0px 10px;">Recording...</div>
+
+            <div class="col-span-2">
+                <button on:click={closeModal} class="bg-gray-400 hover:bg-gray-500" id="stop">Stop</button>
+            </div>
+            
         </div>
-    
-        <button on:click={closeModal} class="bg-gray-400 hover:bg-gray-500" id="stop">Stop</button>
+
     </div>
 
 
@@ -69,7 +77,8 @@
     #stop {
 		border: 2px solid #000000;
 		padding: 2px;
-		width: 85px;
+		width: 150px;
+        height: 50px;
 	}
 
     button:active {
