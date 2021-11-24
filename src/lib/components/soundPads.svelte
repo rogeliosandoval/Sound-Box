@@ -5,32 +5,32 @@
 	const buttons = [
 		{
 			name: "Train",
-			image: "../../img/train.png",
-			sound: "../../audio/train.wav",
+			image: "img/train.png",
+			sound: "audio/train.wav",
             key: "1"
 		},
 		{
 			name: "Golfer",
-			image: "../../img/golf.png",
-			sound: "../../audio/golf.wav",
+			image: "img/golf.png",
+			sound: "audio/golf.wav",
             key: "2"
 		},
 		{
 			name: "Bell",
-			image: "../../img/bell.png",
-			sound: "../../audio/bell.wav",
+			image: "img/bell.png",
+			sound: "audio/bell.wav",
             key: "3"
 		},
 		{
 			name: "Gun",
-			image: "../../img/gun.png",
-			sound: "../../audio/gun.wav",
+			image: "img/gun.png",
+			sound: "audio/gun.wav",
             key: "4"
 		},
 		{
 			name: "Toilet",
-			image: "../../img/toilet.png",
-			sound: "../../audio/toilet.wav",
+			image: "img/toilet.png",
+			sound: "audio/toilet.wav",
             key: "5"
 		}
 	]
