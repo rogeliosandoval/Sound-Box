@@ -1,5 +1,5 @@
 <script>
-
+    import { onMount } from "svelte";
 	import Card from "$lib/components/card.svelte"
 
 	const buttons = [
@@ -34,6 +34,14 @@
             key: "5"
 		}
 	]
+
+	onMount(() => document.addEventListener('keydown', (event) => playMyAudio(event.key)))
+
+	function playMyAudio(keyCode){
+        const button = buttons.filter(btn => btn.key == keyCode).shift();
+		let myAudio = new Audio(button.sound);
+        myAudio.play();
+    }
 
 </script>
 
