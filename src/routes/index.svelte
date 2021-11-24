@@ -2,7 +2,7 @@
 	import SoundFile from "$lib/components/soundFile.svelte"
 	import Modal from "$lib/components/modal.svelte";
 	import { onMount } from "svelte";
-	import { getStores, session } from '$app/stores';
+	import SoundPads from "$lib/components/soundPads.svelte";
 
 
 	let media = [];
@@ -120,7 +120,11 @@
 
 </script>
 
-<section class="relative pb-12 pt-12 font-sans">
+<section class="relative pb-12 pt-5 font-sans">
+
+	<div class="text-center">
+		<p class="text-6xl">Sound-Box</p>
+	</div>
 
 	<div class="container mx-auto text-center">
 		<canvas class="visualizer mx-auto pb-5" width="800px" height="60px"></canvas>
@@ -132,6 +136,8 @@
 	<div class="container mx-auto">
 		<SoundFile {soundClips} on:deleteSoundClip={deleteSoundClip} on:editSoundClip={editSoundClip}/>
 	</div>
+
+	<SoundPads />
 	
 </section>
 

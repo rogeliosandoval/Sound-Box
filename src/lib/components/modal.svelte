@@ -19,7 +19,7 @@
 
         <div class="container grid grid-cols-2 w-1/3 mx-auto gap-y-5 pb-5">
 
-            <div class="">
+            <div>
                 <img alt="record" src="img/record.gif" class="mx-auto" style="width: 95px; height: 90px;">
             </div>
             
@@ -54,7 +54,7 @@
 
     #background {
         display: var(--display);
-        background-color: rgba(0,0,0,0.3);
+        background-color: rgba(0,0,0,0.7);
         position: fixed;
         z-index: 1;
         top: 0;
