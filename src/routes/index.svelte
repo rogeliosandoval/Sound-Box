@@ -2,6 +2,7 @@
 	import SoundFile from "$lib/components/soundFile.svelte"
 	import Modal from "$lib/components/modal.svelte";
 	import { onMount } from "svelte";
+	import { getStores, session } from '$app/stores';
 
 
 	let media = [];
@@ -121,15 +122,16 @@
 
 <section class="relative pb-12 pt-12 font-sans">
 
-	<canvas class="visualizer" height="60px"></canvas>
-
 	<div class="container mx-auto text-center">
-		<button class="bg-red-500 hover:bg-red-600" id="record" on:click={startRecording}>Record</button>
+		<canvas class="visualizer mx-auto pb-5" width="800px" height="60px"></canvas>
+		<button class="bg-green-500 hover:bg-green-600" id="record" on:click={startRecording}>Record</button>
 	</div>
 
 	<Modal {isOpenModal} on:closeModal={stopRecording} /> 
 
-	<SoundFile {soundClips} on:deleteSoundClip={deleteSoundClip} on:editSoundClip={editSoundClip}/>
+	<div class="container mx-auto">
+		<SoundFile {soundClips} on:deleteSoundClip={deleteSoundClip} on:editSoundClip={editSoundClip}/>
+	</div>
 	
 </section>
 
