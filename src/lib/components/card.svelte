@@ -1,34 +1,15 @@
 <script>
 
-    import { onMount } from "svelte";
-
     export let button
 
-    function playMyAudio(keyCode){
-        try {
-            let myAudio = new Audio(button.sound);
-            console.log(myAudio)
-            if(""+keyCode == button.key){
-                myAudio.play();
-            }
-            
-        } catch (error) {
-            console.log(error)
-        }  
-    
+    function playMyAudio(mySound){
+        let myAudio = new Audio(mySound);
+        myAudio.play();
     }
-
-    onMount(() => {
-        document.onkeydown = (event) => {
-            console.log(event.key)
-            playMyAudio(event.key);
-        }
-    })
-
 
 </script>
 
-<button>
+<button on:click={playMyAudio(button.sound)}>
     <div class="cards flex flex-col justify-center gap-x-2 max-w-2xl text-center">
 
     <img class="mx-auto p-7" alt="{button.image}" src="{button.image}">
