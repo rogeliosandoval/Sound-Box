@@ -1,30 +1,5 @@
-<script>
-
-    import { onMount } from "svelte";
-
+<script>   
     export let button
-
-    function playMyAudio(keyCode){
-        try {
-            let myAudio = new Audio(button.sound);
-            console.log(myAudio)
-            if(""+keyCode == button.key){
-                myAudio.play();
-            }
-            
-        } catch (error) {
-            console.log(error)
-        }  
-    
-    }
-
-    onMount(() => {
-        document.onkeydown = (event) => {
-            console.log(event.key)
-            playMyAudio(event.key);
-        }
-    })
-
 
 </script>
 
