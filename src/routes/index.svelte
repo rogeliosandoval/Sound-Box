@@ -120,7 +120,7 @@
 
 </script>
 
-<section class="relative pb-12 pt-5 font-sans">
+<section class="pt-5 font-sans">
 
 	<div class="text-center">
 		<p class="text-6xl">Sound-Box</p>
