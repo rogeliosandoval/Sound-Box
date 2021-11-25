@@ -79,7 +79,7 @@
 
 </script>
 
-<section class="font-sans pt-5">
+<section class="font-sans">
 
 	<section class="mt-10 flex flex-wrap mx-auto w-3/4 gap-5 justify-center">
 		{#each buttons as button}
