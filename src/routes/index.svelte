@@ -3,6 +3,7 @@
 	import Modal from "$lib/components/modal.svelte";
 	import { onMount } from "svelte";
 	import SoundPads from "$lib/components/soundPads.svelte";
+	import DrumPads from "$lib/components/drumPads.svelte";
 
 
 	let media = [];
@@ -15,12 +16,12 @@
 	//IF YOU USE DOCUMENT IT NEEDS TO BE INSIDE ONMOUNT
 	onMount(async () => {
 
-		const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+		const mic = await navigator.mediaDevices.getUserMedia({ audio: true });
 		canvas = document.querySelector('.visualizer');
 		canvasCtx = canvas.getContext('2d');
-		visualize(stream);
+		visualize(mic);
 
-		mediaRecorder = new MediaRecorder(stream);
+		mediaRecorder = new MediaRecorder(mic);
 		mediaRecorder.ondataavailable = (e) => media.push(e.data);
 		mediaRecorder.onstop = function() {
 			const clipName = prompt('Enter a name for your sound clip','My Unnamed Clip');
@@ -33,6 +34,7 @@
 				srcURL: audioURL,
 				id: crypto.randomUUID()
 			}
+			console.log(newSoundClip)
 			//spread y rest
 			soundClips = [...soundClips,newSoundClip];
 		}
@@ -120,14 +122,14 @@
 
 </script>
 
-<section class="pt-5 font-sans">
+<section class="bg-blue-300 pt-5 pb-5 font-sans">
 
 	<div class="text-center">
 		<p class="text-6xl">Sound-Box</p>
 	</div>
 
 	<div class="container mx-auto text-center">
-		<canvas class="visualizer mx-auto pb-5" width="800px" height="60px"></canvas>
+		<canvas class="visualizer mx-auto pb-10" width="800px" height="60px"></canvas>
 		<button class="bg-green-500 hover:bg-green-600" id="record" on:click={startRecording}>Record</button>
 	</div>
 
@@ -138,6 +140,8 @@
 	</div>
 
 	<SoundPads />
+
+	<DrumPads />
 	
 </section>
 
