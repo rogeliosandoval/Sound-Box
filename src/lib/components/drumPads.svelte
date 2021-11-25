@@ -4,7 +4,7 @@
 
 	import Card from "$lib/components/card.svelte"
 
-    const drums = [
+    let drums = [
         {
             name: "Snare 1",
             image: "img/percussion/snare.png",
@@ -77,22 +77,46 @@
         }
     ]
 
-    onMount(() => 
-        document.addEventListener('keydown', (event) => 
-        playMyAudio(event.key)
-    ))
+	onMount(() => {
+		document.addEventListener('keydown', (event) => {
+			playMyAudio(event.key)
+		})
+		document.addEventListener('keyup', (event) => {
+			setTimeout(() =>{
+				drums = drums.map(btn => {
+					btn.isClicked = false;
+					return btn;
+				})
+				stopMyAudio(event.key)
+			}, 75)
+		})
+	})
 
 	function playMyAudio(keyCode){
         const button = drums.filter(btn => btn.key == keyCode).shift();
-		let myAudio = new Audio(button.sound);
-        myAudio.play();
+		if(button){
+			let myAudio = new Audio(button.sound);
+			myAudio.play();
+		}
+		drums = drums.map(btn => {
+			if(btn.key === keyCode) btn.isClicked = true;
+			return btn;
+		})
     }
+
+    function stopMyAudio(keyCode){
+		const button = drums.filter(btn => btn.key == keyCode).shift();
+		if(button){
+			let myAudio = new Audio(button.sound);
+			myAudio.pause();
+		}
+	}
 
 </script>
 
-<section class="relataive font-sans pt-5 bg-blue-200">
+<section class="relataive font-sans">
 
-	<section class="mt-10 flex flex-wrap mx-auto w-3/4 gap-5 justify-center">
+	<section class="mt-5 flex flex-wrap mx-auto w-3/4 gap-5 justify-center">
 		{#each drums as button}
 			<Card button={button} />
 		{/each}
