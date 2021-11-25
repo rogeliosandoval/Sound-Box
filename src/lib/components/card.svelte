@@ -3,7 +3,7 @@
 
 </script>
 
-<button>
+<button class="{button.isClicked ? "transition duration-100 ease-in-out transform -translate-y-2 scale-140" : ""}">
     <div class="cards flex flex-col justify-center gap-x-2 max-w-2xl text-center">
 
     <img class="mx-auto p-7" alt="{button.image}" src="{button.image}">
