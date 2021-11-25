@@ -9,7 +9,7 @@
 
 </script>
 
-<button on:click={playMyAudio(button.sound)}>
+<button on:mousedown={playMyAudio(button.sound)} class="{button.isClicked ? "transition duration-100 ease-in-out transform translate-y-5 scale-140" : ""}">
     <div class="cards flex flex-col justify-center gap-x-2 max-w-2xl text-center">
 
     <img class="mx-auto p-7" alt="{button.image}" src="{button.image}">
@@ -33,4 +33,8 @@
     .cards:hover{
         background-color: darkgrey;
     }
+
+    button:active {
+  		transform: translateY(5px);
+	}
 </style>
