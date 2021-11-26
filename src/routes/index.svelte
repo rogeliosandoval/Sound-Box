@@ -129,7 +129,7 @@
 	</div>
 
 	<div class="container mx-auto text-center">
-		<canvas class="visualizer mx-auto pb-10" width="800px" height="60px"></canvas>
+		<canvas class="visualizer mx-auto pb-10" height="60px"></canvas>
 		<button class="bg-green-500 hover:bg-green-600" id="record" on:click={startRecording}>Record</button>
 	</div>
 

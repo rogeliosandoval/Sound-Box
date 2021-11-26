@@ -9,8 +9,8 @@
 
 </script>
 
-<button on:mousedown={playMyAudio(button.sound)} class="{button.isClicked ? "transition duration-100 ease-in-out transform translate-y-4 scale-140" : ""}">
-    <div class="cards flex flex-col justify-center gap-x-2 max-w-2xl text-center">
+<button on:mousedown={playMyAudio(button.sound)} class="{button.isClicked ? "transition duration-100 ease-in-out transform translate-y-3 translate-x-3 scale-140" : ""}">
+    <div class="{button.isClicked ? "bg-gray-500 box" : ""} bg-gray-300 cards flex flex-col justify-center gap-x-2 max-w-2xl text-center">
 
     <div class="font-bold text-3xl pt-3">{button.name}</div>
     <img class="mx-auto p-7" alt="{button.image}" src="{button.image}">
@@ -27,8 +27,12 @@
     }
 
     .cards{
-        border: 5px solid #000000;
-        background: lightgrey;
+        border: 5px solid darkblue;
+        box-shadow: 5px 5px 5px #000000;
+        transition: background-color 0.25s linear
+    }
+    .cards:active {
+        box-shadow: none;
     }
 
     .cards:hover{
@@ -36,6 +40,6 @@
     }
 
     button:active {
-  		transform: translateY(15px);
+  		transform: translate(10px, 10px);
 	}
 </style>
