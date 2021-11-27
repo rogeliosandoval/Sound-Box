@@ -30,15 +30,22 @@
 			name: "Gun",
 			image: "img/gun.png",
 			sound: "audio/gun.wav",
-            key: "f",
+            key: "z",
             isClicked: false
 		},
 		{
 			name: "Toilet",
 			image: "img/toilet.png",
 			sound: "audio/toilet.wav",
-            key: "g",
+            key: "x",
             isClicked: false
+		},
+		{
+			name: "Cash",
+			image: "img/cash.png",
+			sound: "audio/cash.wav",
+			key: "c",
+			isClicked: false
 		}
 	]
 
