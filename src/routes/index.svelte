@@ -4,6 +4,7 @@
 	import { onMount } from "svelte";
 	import SoundPads from "$lib/components/soundPads.svelte";
 	import DrumPads from "$lib/components/drumPads.svelte";
+	import LoopPads from "$lib/components/loopPads.svelte";
 
 
 	let media = [];
@@ -142,6 +143,8 @@
 	<SoundPads />
 
 	<DrumPads />
+
+	<LoopPads />
 	
 </section>
 
