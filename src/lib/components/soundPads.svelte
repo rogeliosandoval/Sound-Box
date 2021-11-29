@@ -46,6 +46,34 @@
 			sound: "audio/cash.wav",
 			key: "c",
 			isClicked: false
+		},
+		{
+			name: "Droplet",
+			image: "img/droplet.png",
+			sound: "audio/droplet.wav",
+			key: "q",
+			isClicked: false
+		},
+		{
+			name: "Laser",
+			image: "img/laser.png",
+			sound: "audio/laser.wav",
+			key: "w",
+			isClicked: false
+		},
+		{
+			name: "Paper Tear",
+			image: "img/paper.png",
+			sound: "audio/paper.wav",
+			key: "e",
+			isClicked: false
+		},
+		{
+			name: "Thunder",
+			image: "img/thunder.png",
+			sound: "audio/thunder.wav",
+			key: "r",
+			isClicked: false
 		}
 	]
 
