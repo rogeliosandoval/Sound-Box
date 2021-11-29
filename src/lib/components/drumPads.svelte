@@ -30,14 +30,14 @@
             name: "Kick 2",
             image: "img/percussion/kick.png",
             sound: "audio/percussion/kick2.wav",
-            key: ".",
+            key: "3",
             isClicked: false
         },
         {
             name: "High-Hat 1",
             image: "img/percussion/hat.png",
             sound: "audio/percussion/hat1.wav",
-            key: "3",
+            key: "9",
             isClicked: false
         },
         {
@@ -123,11 +123,3 @@
 	</section>
 	
 </section>
-
-<style>
-
-    /* button:active {
-  		transform: translateY(5px);
-	} */
-
-</style>
