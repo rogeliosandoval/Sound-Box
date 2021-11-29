@@ -36,7 +36,7 @@
     }
 
     .cards:hover{
-        background-color: darkgrey;
+        background-color: rgb(149, 149, 149);
     }
 
     button:active {
