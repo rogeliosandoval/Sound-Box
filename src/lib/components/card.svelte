@@ -2,14 +2,19 @@
 
     export let button
 
-    function playMyAudio(mySound){
+    function playMyAudio(mySound, myName){
         let myAudio = new Audio(mySound);
+        if (myName == "Loop"){
+            myAudio.loop = true
+            } else {
+            myAudio.loop = false
+        }
         myAudio.play();
     }
 
 </script>
 
-<button on:mousedown={playMyAudio(button.sound)} class="{button.isClicked ? "transition duration-100 ease-in-out transform translate-y-3 translate-x-3 scale-140" : ""}">
+<button on:mousedown={playMyAudio(button.sound, button.name)} class="{button.isClicked ? "transition duration-100 ease-in-out transform translate-y-3 translate-x-3 scale-140" : ""}">
     <div class="{button.isClicked ? "bg-gray-500 box" : ""} bg-gray-300 cards flex flex-col justify-center gap-x-2 max-w-2xl text-center">
 
     <div class="font-bold text-3xl pt-3">{button.name}</div>

@@ -121,6 +121,11 @@
 		})
 	}
 
+	function stopAllAudio(){
+		audio.pause();
+		audio.currentTime = 0;
+	}
+
 </script>
 
 <section class="bg-blue-300 pt-5 pb-5 font-sans">
@@ -145,6 +150,10 @@
 	<DrumPads />
 
 	<LoopPads />
+
+	<div class="text-center pt-5">
+		<button on:click={stopAllAudio} id="stopSound" class="bg-red-500 hover:bg-red-600 font-bold">STOP AUDIO</button>
+	</div>
 	
 </section>
 
@@ -154,7 +163,14 @@
 	#record {
 		border: 2px solid #000000;
 		padding: 2px;
-		width: 85px;
+		width: 90px;
+	}
+
+	#stopSound {
+		border: 2px solid #000000;
+		padding: px;
+		width: 120px;
+		height: 50px;
 	}
 
 	button:active {

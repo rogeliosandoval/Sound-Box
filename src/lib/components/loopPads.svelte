@@ -6,35 +6,35 @@
 
     let loops = [
         {
-            name: "Loop 1",
+            name: "Loop",
             image: "img/loop.png",
             sound: "audio/loops/loop1.wav",
             key: "n",
             isClicked: false
         },
         {
-            name: "Loop 2",
+            name: "Loop",
             image: "img/loop.png",
             sound: "audio/loops/loop2.wav",
             key: "m",
             isClicked: false
         },
         {
-            name: "Loop 3",
+            name: "Loop",
             image: "img/loop.png",
             sound: "audio/loops/loop3.wav",
             key: ",",
             isClicked: false
         },
         {
-            name: "Loop 4",
+            name: "Loop",
             image: "img/loop.png",
             sound: "audio/loops/loop4.wav",
             key: ".",
             isClicked: false
         },
         {
-            name: "Loop 5",
+            name: "Loop",
             image: "img/loop.png",
             sound: "audio/loops/loop5.wav",
             key: "/",
@@ -59,13 +59,12 @@
 
 	function playMyAudio(keyCode){
         const button = loops.filter(btn => btn.key == keyCode).shift();
-		if(button){
-			let myAudio = new Audio(button.sound);
-			myAudio.play();
-            myAudio.loop = true;
-		}
+        if(button){
+            let myAudio = new Audio(button.sound);
+            myAudio.play();
+        }
 		loops = loops.map(btn => {
-			if(btn.key === keyCode) btn.isClicked = true;
+            if(btn.key === keyCode) btn.isClicked = true;
 			return btn;
 		})
     }
@@ -77,6 +76,11 @@
 			myAudio.pause();
 		}
 	}
+
+    function stopAllAudio(){
+        myAudio.pause();
+        myAudio.currentTime();
+    }
 
 </script>
 
