@@ -11,6 +11,9 @@
 	let soundClips = [];
 	let mediaRecorder;
 	let isOpenModal = false;
+	let audioFile;
+	let theLoops;
+	$:console.log(theLoops);
 
 	let audioCtx, canvas, canvasCtx;
 
@@ -121,9 +124,13 @@
 		})
 	}
 
-	function stopAllAudio(){
-		audio.pause();
-		audio.currentTime = 0;
+	function resetSoundBoard(){
+		audioFile.pause();
+		audioFile.currentTime = 0;
+		theLoops = theLoops.map(btn => {
+			btn.isClicked = false;
+			return btn;
+		})
 	}
 
 </script>
@@ -149,10 +156,10 @@
 
 	<DrumPads />
 
-	<LoopPads />
+	<LoopPads bind:myAudio={audioFile} bind:loops={theLoops}/>
 
 	<div class="text-center pt-5">
-		<button on:click={stopAllAudio} id="stopSound" class="bg-red-500 hover:bg-red-600 font-bold">STOP AUDIO</button>
+		<button on:click={resetSoundBoard} id="stopSound" class="bg-red-500 hover:bg-red-600 font-bold">STOP AUDIO</button>
 	</div>
 	
 </section>

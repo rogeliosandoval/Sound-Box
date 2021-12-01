@@ -4,7 +4,7 @@
 
 	import Card from "$lib/components/card.svelte"
 
-    let loops = [
+    export let loops = [
         {
             name: "Loop",
             image: "img/loop.png",
@@ -42,44 +42,43 @@
         }
     ]
 
+    export let myAudio;
+
 	onMount(() => {
 		document.addEventListener('keydown', (event) => {
 			playMyAudio(event.key)
-		})
-		document.addEventListener('keyup', (event) => {
-			setTimeout(() =>{
-				loops = loops.map(btn => {
-					btn.isClicked = false;
-					return btn;
-				})
-				stopMyAudio(event.key)
-			}, 75)
+            resetLoops(event.key)
 		})
 	})
 
-	function playMyAudio(keyCode){
-        const button = loops.filter(btn => btn.key == keyCode).shift();
-        if(button){
-            let myAudio = new Audio(button.sound);
-            myAudio.play();
-        }
-		loops = loops.map(btn => {
-            if(btn.key === keyCode) btn.isClicked = true;
+    function resetLoops(keyCode){
+        if(keyCode === ' '){
+            myAudio.pause();
+            myAudio.currentTime = 0;
+            loops = loops.map(btn => {
+            btn.isClicked = false;
 			return btn;
 		})
+        }
     }
 
-    function stopMyAudio(keyCode){
-		const button = loops.filter(btn => btn.key == keyCode).shift();
-		if(button){
-			let myAudio = new Audio(button.sound);
-			myAudio.pause();
-		}
-	}
-
-    function stopAllAudio(){
-        myAudio.pause();
-        myAudio.currentTime();
+	function playMyAudio(keyCode){
+        if(keyCode !== ' '){
+            const button = loops.filter(btn => btn.key == keyCode).shift();
+            if(!button.isClicked){
+                myAudio = new Audio(button.sound);
+                myAudio.play();
+                myAudio.loop = true;
+            } else {
+                myAudio.pause();
+                myAudio.currentTime = 0;
+            }
+            loops = loops.map(btn => {
+                if(btn.key === keyCode && !btn.isClicked) btn.isClicked = true;
+                else btn.isClicked = false;
+                return btn;
+            })
+        }
     }
 
 </script>
