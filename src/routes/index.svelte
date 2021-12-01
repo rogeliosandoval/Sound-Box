@@ -13,7 +13,6 @@
 	let isOpenModal = false;
 	let audioFile;
 	let theLoops;
-	$:console.log(theLoops);
 
 	let audioCtx, canvas, canvasCtx;
 
