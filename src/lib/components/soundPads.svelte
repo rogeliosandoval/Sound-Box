@@ -10,70 +10,110 @@
 			image: "img/train.png",
 			sound: "audio/train.wav",
             key: "a",
-            isClicked: false
+            isClicked: false,
+			color: {
+				primary: "bg-red-300",
+				secondary: "bg-red-600"
+			}
 		},
 		{
 			name: "Golfer",
 			image: "img/golf.png",
 			sound: "audio/golf.wav",
             key: "s",
-            isClicked: false
+            isClicked: false,
+			color: {
+				primary: "bg-red-300",
+				secondary: "bg-red-600"
+			}
 		},
 		{
 			name: "Bell",
 			image: "img/bell.png",
 			sound: "audio/bell.wav",
             key: "d",
-            isClicked: false
+            isClicked: false,
+			color: {
+				primary: "bg-red-300",
+				secondary: "bg-red-600"
+			}
 		},
 		{
 			name: "Gun",
 			image: "img/gun.png",
 			sound: "audio/gun.wav",
             key: "z",
-            isClicked: false
+            isClicked: false,
+			color: {
+				primary: "bg-red-300",
+				secondary: "bg-red-600"
+			}
 		},
 		{
 			name: "Toilet",
 			image: "img/toilet.png",
 			sound: "audio/toilet.wav",
             key: "x",
-            isClicked: false
+            isClicked: false,
+			color: {
+				primary: "bg-red-300",
+				secondary: "bg-red-600"
+			}
 		},
 		{
 			name: "Cash",
 			image: "img/cash.png",
 			sound: "audio/cash.wav",
 			key: "c",
-			isClicked: false
+			isClicked: false,
+			color: {
+				primary: "bg-red-300",
+				secondary: "bg-red-600"
+			}
 		},
 		{
 			name: "Droplet",
 			image: "img/droplet.png",
 			sound: "audio/droplet.wav",
 			key: "q",
-			isClicked: false
+			isClicked: false,
+			color: {
+				primary: "bg-red-300",
+				secondary: "bg-red-600"
+			}
 		},
 		{
 			name: "Laser",
 			image: "img/laser.png",
 			sound: "audio/laser.wav",
 			key: "w",
-			isClicked: false
+			isClicked: false,
+			color: {
+				primary: "bg-red-300",
+				secondary: "bg-red-600"
+			}
 		},
 		{
 			name: "Paper Tear",
 			image: "img/paper.png",
 			sound: "audio/paper.wav",
 			key: "e",
-			isClicked: false
+			isClicked: false,
+			color: {
+				primary: "bg-red-300",
+				secondary: "bg-red-600"
+			}
 		},
 		{
 			name: "Thunder",
 			image: "img/thunder.png",
 			sound: "audio/thunder.wav",
 			key: "r",
-			isClicked: false
+			isClicked: false,
+			color: {
+				primary: "bg-red-300",
+				secondary: "bg-red-600"
+			}
 		}
 	]
 
