@@ -46,20 +46,22 @@
 
 	onMount(() => {
 		document.addEventListener('keydown', (event) => {
-			playMyAudio(event.key)
-            resetLoops(event.key)
+            if(event.key === ' '){
+                resetLoops()
+            } else {
+                playMyAudio(event.key)
+            }
+
 		})
 	})
 
-    function resetLoops(keyCode){
-        if(keyCode === ' '){
-            myAudio.pause();
-            myAudio.currentTime = 0;
-            loops = loops.map(btn => {
+    function resetLoops(){
+        myAudio.pause();
+        myAudio.currentTime = 0;
+        loops = loops.map(btn => {
             btn.isClicked = false;
-			return btn;
-		})
-        }
+            return btn;
+        })
     }
 
 	function playMyAudio(keyCode){
