@@ -2,7 +2,7 @@
 
     import { onMount } from "svelte";
 
-	import Card from "$lib/components/card.svelte"
+	import LoopCards from "$lib/components/cards/loopCards.svelte"
 
     export let loops = [
         {
@@ -89,7 +89,7 @@
 
 	<section class="mt-5 flex flex-wrap mx-auto w-3/4 gap-5 justify-center">
 		{#each loops as button}
-			<Card button={button} />
+			<LoopCards button={button} />
 		{/each}
 	</section>
 	

@@ -2,7 +2,7 @@
 
     import { onMount } from "svelte";
 
-	import Card from "$lib/components/card.svelte"
+	import DrumCards from "$lib/components/cards/drumCards.svelte"
 
     let drums = [
         {
@@ -118,7 +118,7 @@
 
 	<section class="mt-5 flex flex-wrap mx-auto w-3/4 gap-5 justify-center">
 		{#each drums as button}
-			<Card button={button} />
+			<DrumCards button={button} />
 		{/each}
 	</section>
 	

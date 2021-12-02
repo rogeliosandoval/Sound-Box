@@ -2,7 +2,7 @@
 
     import { onMount } from "svelte";
 
-	import Card from "$lib/components/card.svelte"
+	import SoundCards from "$lib/components/cards/soundCards.svelte"
 
 	let buttons = [
 		{
@@ -158,7 +158,7 @@
 
 	<section class="mt-10 flex flex-wrap mx-auto w-3/4 gap-5 justify-center">
 		{#each buttons as button}
-			<Card button={button} />
+			<SoundCards button={button} />
 		{/each}
 	</section>
 	

@@ -5,6 +5,7 @@
 	import SoundPads from "$lib/components/soundPads.svelte";
 	import DrumPads from "$lib/components/drumPads.svelte";
 	import LoopPads from "$lib/components/loopPads.svelte";
+	import GamePads from "$lib/components/gamePads.svelte";
 
 
 	let media = [];
@@ -154,6 +155,8 @@
 	<SoundPads />
 
 	<DrumPads />
+
+	<GamePads />
 
 	<LoopPads bind:myAudio={audioFile} bind:loops={theLoops}/>
 
