@@ -2,21 +2,17 @@
 
     export let button
 
-    function playMyAudio(mySound, myName){
+    function playMyAudio(mySound){
         let myAudio = new Audio(mySound);
-        if (myName == "Loop"){
-            myAudio.loop = true
-            } else {
-            myAudio.loop = false
-        }
         myAudio.play();
     }
-    $:buttonClass = button.isClicked ? button.color.secondary : button?.color?.primary;
+
+    //let buttonClass = button.isClicked ? button.color.secondary : button?.color?.primary;
 
 </script>
 
-<button on:mousedown={playMyAudio(button.sound, button.name)} class="{button.isClicked ? "transition duration-100 ease-in-out transform translate-y-3 translate-x-3 scale-140" : ""}">
-    <div class="{buttonClass} cards flex flex-col justify-center gap-x-2 max-w-2xl text-center">
+<button on:mousedown={playMyAudio(button.sound)} class="{button.isClicked ? "transition duration-100 ease-in-out transform translate-y-3 translate-x-3 scale-140" : ""}">
+    <div class="{button.isClicked ? "bg-yellow-700 box" : ""} bg-yellow-200 cards flex flex-col justify-center gap-x-2 max-w-2xl text-center box">
 
     <div class="font-bold text-3xl pt-3">{button.name}</div>
     <img class="mx-auto p-7" alt="{button.image}" src="{button.image}">
@@ -33,7 +29,7 @@
     }
 
     .cards{
-        border: 5px solid darkblue;
+        border: 5px solid black;
         box-shadow: 5px 5px 5px #000000;
         transition: background-color 0.25s linear
     }
@@ -42,7 +38,7 @@
     }
 
     .cards:hover{
-        background-color: rgb(149, 149, 149);
+        background-color: rgb(180, 153, 0);
     }
 
     button:active {
