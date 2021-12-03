@@ -1,8 +1,18 @@
 <script>
 
-    export let button
+    import { onMount } from "svelte";
+
+    export let button;
     let myAudio;
     let isActive = false;
+
+    onMount(() => {
+		document.addEventListener('keydown', (event) => {
+            if(event.key === 'Escape'){
+                resetLoops()
+            }
+		})
+	})
 
     function playMyAudio(button){
         if(!button.isClicked){
@@ -16,6 +26,13 @@
             button.isClicked = false;
         }
         isActive = !isActive
+    }
+
+    function resetLoops(){
+        myAudio.pause();
+        myAudio.currentTime = 0;
+        button.isClicked = false;
+        isActive = false;
     }
 
 </script>

@@ -124,14 +124,14 @@
 		})
 	}
 
-	function resetSoundBoard(){
-		audioFile.pause();
-		audioFile.currentTime = 0;
-		theLoops = theLoops.map(btn => {
-			btn.isClicked = false;
-			return btn;
-		})
-	}
+	// function resetSoundBoard(){
+	// 	audioFile.pause();
+	// 	audioFile.currentTime = 0;
+	// 	theLoops = theLoops.map(btn => {
+	// 		btn.isClicked = false;
+	// 		return btn;
+	// 	})
+	// }
 
 </script>
 
@@ -158,11 +158,17 @@
 
 	<GamePads />
 
-	<LoopPads bind:myAudio={audioFile} bind:loops={theLoops}/>
+	<LoopPads />
 
-	<div class="text-center pt-5">
-		<button on:click={resetSoundBoard} id="stopSound" class="bg-red-500 hover:bg-red-600 font-bold">STOP AUDIO</button>
+	<div class="pt-8">
+		<div class="w-64 mx-auto text-center border-black border-4 bg-red-50 text-lg">
+			press <b>ESC</b> to cut all sounds
+		</div>
 	</div>
+
+	<!-- <div class="text-center pt-5">
+		<button on:click={resetSoundBoard} id="stopSound" class="bg-red-500 hover:bg-red-600 font-bold">STOP AUDIO</button>
+	</div> -->
 	
 </section>
 

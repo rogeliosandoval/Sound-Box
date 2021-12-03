@@ -46,7 +46,7 @@
 
 	onMount(() => {
 		document.addEventListener('keydown', (event) => {
-            if(event.key === ' '){
+            if(event.key === 'Escape'){
                 resetLoops()
             } else {
                 playMyAudio(event.key)
