@@ -12,9 +12,9 @@
 </script>
 
 <button on:mousedown={playMyAudio(button.sound)} class="{button.isClicked ? "transition duration-100 ease-in-out transform translate-y-3 translate-x-3 scale-140" : ""}">
-    <div class="{button.isClicked ? "bg-yellow-700 box" : ""} bg-yellow-200 cards flex flex-col justify-center gap-x-2 max-w-2xl text-center box">
+    <div class="{button.isClicked ? "keys" : ""} cards flex flex-col justify-center gap-x-2 max-w-2xl text-center box">
 
-    <div class="font-bold text-3xl pt-3">{button.name}</div>
+    <div class="font-bold text-2xl pt-3">{button.name}</div>
     <img class="mx-auto p-7" alt="{button.image}" src="{button.image}">
     <div class="font-bold text-xl pb-3">{button.key}</div>
 
@@ -24,11 +24,17 @@
 
 <style>
     img {
-        width: 250px;
-        height: 240px;
+        width: 190px;
+        height: 180px;
+    }
+
+    .keys {
+        filter: brightness(85%);
     }
 
     .cards{
+        background: url("img/general/boxpaper.jpeg");
+        background-size: cover;
         border: 5px solid black;
         box-shadow: 5px 5px 5px #000000;
         transition: background-color 0.25s linear
@@ -38,7 +44,9 @@
     }
 
     .cards:hover{
-        background-color: rgb(180, 153, 0);
+        background: url("img/general/boxpaper.jpeg");
+        background-size: cover;
+        filter: brightness(85%);
     }
 
     button:active {
