@@ -1,38 +1,5 @@
-# create-svelte
-
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+<h1>Sound Box</h1>
+This project is a sound board that provides users with different kinds of sounds they can play around with in order to make a simple beat and/or song. Users are able to record themsleves as well and playback their recordings as each one logs itself. Clicking the buttons or pressing any of the assigned keys will produce the sounds they're assigned to. Mixing and matching different sounds can create interesting tunes.
+<br>
+<br>
+This is a fun project I made that allowed me to practice more with all kinds of different functions, methods and ways of connectivity. Accessing the BOM and utuilizing what I can from it in the DOM, playing around with event listeners, binding children to parents and so much more are all examples of what I was able to practice with. The goal of this project was to get more experience with connectivitiy and I definitely have a much better understanding of how everything works.
