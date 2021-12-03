@@ -20,7 +20,7 @@
         <div class="container grid grid-cols-2 w-1/3 mx-auto gap-y-5 pb-5">
 
             <div>
-                <img alt="record" src="img/record.gif" class="mx-auto" style="width: 95px; height: 90px;">
+                <img alt="record" src="img/general/record.gif" class="mx-auto" style="width: 95px; height: 90px;">
             </div>
             
             <div class="text-2xl text-red-300 mt-10" style="text-shadow:black 0px 0px 10px;">Recording...</div>
