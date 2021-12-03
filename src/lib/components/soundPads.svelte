@@ -128,7 +128,7 @@
 					return btn;
 				})
 				stopMyAudio(event.key)
-			}, 200)
+			}, 75)
 		})
 	})
 
