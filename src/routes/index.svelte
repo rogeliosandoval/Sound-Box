@@ -12,6 +12,10 @@
 	let soundClips = [];
 	let mediaRecorder;
 	let isOpenModal = false;
+	let showPad = true;
+	let showDrum = true;
+	let showGame = true;
+	let showLoop = true;
 	let audioFile;
 	let theLoops;
 
@@ -135,10 +139,30 @@
 
 </script>
 
-<section class="bg-blue-300 pt-5 pb-5 font-sans">
+<section class="pt-5 pb-5 font-sans">
 
-	<div class="text-center">
-		<p class="text-6xl">Sound-Box</p>
+	<div class="fixed">
+		<img class="title" alt="SoundBox" src="img/general/soundbox.png">
+
+		<div class="sideInfo mx-10">
+			<p class="neonText mx-auto">BG by <a class="text-green-500" href="https://www.artstation.com/ivxn">Ivan Alvarez</a></p>
+			<br>
+			<label class="text-white text-xl font-bold text tracking-wider">
+				<input type="checkbox" bind:checked={showPad}> Misc Sounds
+			</label>
+			<br>
+			<label class="text-white text-xl font-bold text tracking-wider neonTextStay">
+				<input type="checkbox" bind:checked={showDrum}> Percussion
+			</label>
+			<br>
+			<label class="text-white text-xl font-bold text tracking-wider">
+				<input type="checkbox" bind:checked={showGame}> Game Sounds
+			</label>
+			<br>
+			<label class="text-white text-xl font-bold text tracking-wider neonTextStay">
+				<input type="checkbox" bind:checked={showLoop}> Loops
+			</label>
+		</div>
 	</div>
 
 	<div class="container mx-auto text-center">
@@ -152,19 +176,27 @@
 		<SoundFile {soundClips} on:deleteSoundClip={deleteSoundClip} on:editSoundClip={editSoundClip}/>
 	</div>
 
-	<SoundPads />
+	{#if showPad}
+		<SoundPads />
+	{/if}
 
-	<DrumPads />
+	{#if showDrum}
+		<DrumPads />
+	{/if}
 
-	<GamePads />
+	{#if showGame}
+		<GamePads />
+	{/if}
 
-	<LoopPads />
-
-	<div class="pt-8">
-		<div class="w-64 mx-auto text-center border-black border-4 bg-red-50 text-lg">
-			press <b>ESC</b> to cut all sounds
+	{#if showLoop}
+		<LoopPads />
+		<div class="mx-auto pt-5">
+			<div class="w-60 mx-auto text-center border-black border-4 bg-red-50 text-lg">
+				press <b>ESC</b> to stop loops
+			</div>
 		</div>
-	</div>
+	{/if}
+
 
 	<!-- <div class="text-center pt-5">
 		<button on:click={resetSoundBoard} id="stopSound" class="bg-red-500 hover:bg-red-600 font-bold">STOP AUDIO</button>
@@ -174,6 +206,59 @@
 
 
 <style>
+
+	@media screen and (max-width:1280px) {
+		.title {
+			width: 250px;
+			height: 155px;
+		}
+	}
+
+	@media screen and (max-width:640px) {
+		.title {
+			display: none;
+		}
+
+		.sideInfo {
+			display: none;
+		}
+	}
+
+	.neonTextStay{
+		text-shadow:
+			0 0 40px #0fa,
+			0 0 80px #0fa,
+			0 0 90px #0fa,
+			0 0 100px #0fa,
+			0 0 150px #0fa;
+	}
+
+	.neonText {
+		font-size: 20px;
+		font-weight: bold;
+		animation: flicker 1.5s infinite alternate;
+  		color: #fff;
+	}
+
+	@keyframes flicker {
+		0%, 18%, 22%, 25%, 53%, 57%, 100% {
+	
+			text-shadow:
+			0 0 4px #fff,
+			0 0 11px #fff,
+			0 0 19px #fff,
+			0 0 40px #0fa,
+			0 0 80px #0fa,
+			0 0 90px #0fa,
+			0 0 100px #0fa,
+			0 0 150px #0fa;
+		
+		}
+		
+		20%, 24%, 55% {        
+			text-shadow: none;
+		}    
+  	}
 	
 	#record {
 		border: 2px solid #000000;
@@ -181,12 +266,12 @@
 		width: 90px;
 	}
 
-	#stopSound {
+	/* #stopSound {
 		border: 2px solid #000000;
 		padding: px;
 		width: 120px;
 		height: 50px;
-	}
+	} */
 
 	button:active {
   		transform: translateY(3px);
