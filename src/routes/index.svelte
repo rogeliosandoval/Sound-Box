@@ -191,8 +191,8 @@
 	{#if showLoop}
 		<LoopPads />
 		<div class="mx-auto pt-5">
-			<div class="w-60 mx-auto text-center border-black border-4 bg-red-50 text-lg">
-				press <b>ESC</b> to stop loops
+			<div class="w-48 mx-auto text-center border-black border-4 bg-red-50 text-lg">
+				<b>ESC</b> to stop loops
 			</div>
 		</div>
 	{/if}
