@@ -1,4 +1,13 @@
 <h1>Sound Box</h1>
+<h3>Framework Used:</h3>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg" width="60px;"/>
+<h3>Languages Used:</h3>
+<p float="left">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" width="60px;"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="60px;"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" width="60px;"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="60px;"/>
+</p>
 This project is a sound board that provides users with different kinds of sounds they can play around with in order to make a simple beat and/or song. Users are able to record themselves as well and playback their recordings as each one logs itself. Clicking the buttons or pressing any of the assigned keys will produce the sounds they're assigned to. Mixing and matching different sounds can create interesting tunes!
 <br>
 <br>
