@@ -15,7 +15,7 @@ This project is a sound board that provides users with different kinds of sounds
 This is a fun project I made that allowed me to practice more with all kinds of different functions, methods and ways of connectivity. Accessing the BOM and utilizing what I can from it in the DOM, playing around with event listeners, binding children to parents and so much more are all examples of what I was able to practice with. The goal of this project was to get more experience with connectivity and I definitely have a much better understanding of how everything works.
 <br>
 <br>
-<img src="sound2.gif" width="100%" height="480px">
+<img src="sound2.gif" width="100%" height="auto">
 <b>BG done by <a href="https://www.artstation.com/ivxn">Ivan Alvarez</a></b>
 <br>
 <br>
