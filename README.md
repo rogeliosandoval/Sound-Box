@@ -16,7 +16,7 @@ This is a fun project I made that allowed me to practice more with all kinds of 
 <br>
 <br>
 <img src="sound2.gif" width="100%" height="auto">
-<b>BG done by <a href="https://www.artstation.com/ivxn">Ivan Alvarez</a></b>
+<b>BG done by <a href="https://www.artstation.com/ivxn" target="_blank">Ivan Alvarez</a></b>
 <br>
 <br>
 Thank You!<img src="https://cdn-icons-png.flaticon.com/128/727/727218.png" width="25px" height="25px">
