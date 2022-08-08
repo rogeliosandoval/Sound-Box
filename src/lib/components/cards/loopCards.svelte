@@ -60,7 +60,7 @@
     .active {
 		box-shadow: none;
         transform: translate(10px, 10px);
-        background: url("img/general/yellowpaper.jpeg");
+        background: url("/img/general/yellowpaper.jpeg");
         background-size: cover;
         filter: brightness(85%);
 	}

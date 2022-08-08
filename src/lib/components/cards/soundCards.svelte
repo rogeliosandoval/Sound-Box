@@ -32,7 +32,7 @@
     }
 
     .cards{
-        background: url("img/general/lightpaper.jpeg");
+        background: url("/img/general/lightpaper.jpeg");
         border: 5px solid black;
         box-shadow: 5px 5px 5px #000000;
         transition: background-color 0.25s linear

@@ -44,7 +44,7 @@
     }
 
     .cards:hover{
-        background: url("img/general/oldpaper.jpeg");
+        background: url("/img/general/oldpaper.jpeg");
         background-size: cover;
         filter: brightness(85%);
     }

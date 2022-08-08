@@ -33,7 +33,7 @@
     }
 
     .cards{
-        background: url("img/general/boxpaper.jpeg");
+        background: url("/img/general/boxpaper.jpeg");
         background-size: cover;
         border: 5px solid black;
         box-shadow: 5px 5px 5px #000000;
