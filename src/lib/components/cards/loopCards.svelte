@@ -71,14 +71,14 @@
     }
 
     .cards{
-        background: url("img/general/yellowpaper.jpeg");
+        background: url("/img/general/yellowpaper.jpeg");
         background-size: cover;
         border: 5px solid darkblue;
         transition: background-color 0.25s linear
     }
 
     .cards:hover{
-        background: url("img/general/yellowpaper.jpeg");
+        background: url("/img/general/yellowpaper.jpeg");
         background-size: cover;
         filter: brightness(85%);
     }

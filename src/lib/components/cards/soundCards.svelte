@@ -42,7 +42,7 @@
     }
 
     .cards:hover{
-        background: url("img/general/lightpaper.jpeg");
+        background: url("/img/general/lightpaper.jpeg");
         filter: brightness(85%);
     }
 
