@@ -1,4 +1,6 @@
 <h1>Sound Box</h1>
+<a href="https://sound-box-96.netlify.app/"><b>Live Demo</b></a>
+<br>
 <h3>Framework Used:</h3>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg" width="60px;"/>
 <h3>Languages Used:</h3>
